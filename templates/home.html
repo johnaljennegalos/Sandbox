@@ -1,14 +1,10 @@
-<!doctype html>
-{% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HOME</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
-    <h1>HOME</h1>
-    <p>Chech out my <a href="/about">ABOUT</a> page.</p>
-</body>
-</html>
+{% extends 'layout.html' %}
+	
+{% block title %}
+	HOME
+{% endblock %}
+
+{% block content %}
+    <h1>ABOUT</h1>
+    <p>Chech out my <a href="/">HOME</a> page.</p>
+{% endblock %}
