@@ -41,7 +41,8 @@ a:hover {
 }
 
 .banner{
-    display: block;
-    width: 100%;
-    max-width: 800px;
+    /*display: block;*/
+    width: 100px;
+    height: 250px;
+    max-width: 200px;
 }
