@@ -15,7 +15,10 @@ def user_register(request):
 
 def login_view(request):
     if request.method == 'POST':
-        return redirect('users:login')
+        form = AuthenticationForm(data=request.POST)
+        if form.is_valid():
+            #Login
+            return redirect('posts:list')
     else:
         form = AuthenticationForm()
     return render(request, 'users/login.html', {'form': form})
