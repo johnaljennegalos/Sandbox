@@ -18,7 +18,7 @@ def posts_new(request):
         form = forms.CreatePost(request.POST, request.FILES)
         if form.is_valid():
             newpost = form.save(commit=False)
-            newpost.user = request.user
+            newpost.User = request.user
             newpost.save()
             return redirect('posts:list')
     else:
